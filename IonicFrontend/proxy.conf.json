@@ -1,0 +1,13 @@
+{
+"/server": {
+    "target": "http://localhost:27015/",
+    "secure": false,
+    "changeOrigin": true
+  },
+
+"/socket.io": {
+    "target": "http://localhost:27015/",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
