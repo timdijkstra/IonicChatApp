@@ -1,11 +1,12 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { TestBed, async } from '@angular/core/testing';
+import {TestBed, async, getTestBed} from '@angular/core/testing';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
+import {App} from "@capacitor/core";
 
 describe('AppComponent', () => {
 
@@ -43,5 +44,11 @@ describe('AppComponent', () => {
   });
 
   // TODO: add more tests!
+
+  it('should gave both 2 pages',  () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const component = fixture.componentInstance;
+    expect(component.pages.length).toBe(2);
+  });
 
 });

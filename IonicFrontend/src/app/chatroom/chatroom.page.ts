@@ -16,9 +16,7 @@ export class ChatroomPage implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
-      console.log('yeeeeeeeeeeeeet ' + params);
       this.nickname = params['name'];
-      console.log(this.nickname);
     });
   }
 
